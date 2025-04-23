@@ -1,0 +1,30 @@
+from operation import addition, soustraction, multiplication, division
+
+def main():
+    try:
+        a = float(input("Entrez le premier nombre : "))
+        b = float(input("Entrez le deuxième nombre : "))
+
+        print("\nChoisissez une opération :")
+        print("1. Addition")
+        print("2. Soustraction")
+        print("3. Multiplication")
+        print("4. Division")
+
+        choix = input("Votre choix (1/2/3/4) : ")
+
+        if choix == '1':
+            print("Résultat :", addition(a, b))
+        elif choix == '2':
+            print("Résultat :", soustraction(a, b))
+        elif choix == '3':
+            print("Résultat :", multiplication(a, b))
+        elif choix == '4':
+            print("Résultat :", division(a, b))
+        else:
+            print("Choix invalide.")
+    except ValueError as e:
+        print("Erreur :", e)
+
+if __name__ == "__main__":
+    main()
